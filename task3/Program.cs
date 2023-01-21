@@ -1,15 +1,23 @@
-﻿// Найти сумму чисел от 1 до А
-// Показать таблиц
-int Num1 = 0;
-int Num2 = 0;
-Console.Write("Введите число: ");
-Num1 = int.Parse(Console.ReadLine() ?? "0");
-for (int i = 1; i <= Num1; i++)
-{
-    Num2=Num2+i;
-}
-Console.WriteLine("Сумма чисел от 1 до "+ Num1 +" -> "+Num2);
-// вариант 2
+﻿int Num1; // Основное число
 
-Num2 = (( 1+ Num1)*Num1)/2;
-Console.WriteLine("Сумма чисел от 1 до "+ Num1 +" -> "+Num2);
+int Num_rzd; // Разрядность основного числа
+Num_rzd = 1;
+Console.Write("Введите число  : ");
+Num1 = int.Parse(Console.ReadLine());
+// Определяем количество разрядов в числе
+// Мы нашли k грибов
+while (Num1 / Math.Pow(10,Num_rzd) > 1 & Num_rzd < 10)
+{
+Num_rzd = Num_rzd + 1; 
+}
+switch (Num_rzd)
+{
+   case 1:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разряд");break;}
+   case 2:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разряда");break;}
+   case 3:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разряда");break;}
+   case 4:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разряда");break;}
+   case 5:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разрядов");break;}
+   case 6:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разрядов");break;}
+   case 7:  {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разрядов");break;}
+   default: {Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разряда");break;}
+}
