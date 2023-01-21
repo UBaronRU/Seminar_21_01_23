@@ -11,8 +11,5 @@ while (Num1 / Math.Pow(10,Num_rzd) > 1 & Num_rzd < 10)
 {
 Num_rzd = Num_rzd + 1; 
 }
-//switch (Num_rzd)
-//{
-//
-//}
-Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " разряда");
+okonchanie = array [Num_rzd%10];
+Console.WriteLine(" У введенного числа "+Num1+" -> " + Num_rzd + " "+okonchanie);
